@@ -1,0 +1,44 @@
+Andrew Lim
+US citizen authorized to work for any employer
+andrew.lim0023@gmail.com • (980) 322-6171 • github.com/CS-alim • Charlotte, NC
+EDUCATION
+University of South Carolina | Columbia, SC January 2024 - May 2026
+Bachelor of Science in Computer Science/ Minor in Data Science and Business Administration GPA: 3.5/4
+● Earned Hours: 94
+SKILLS & TECHNICAL TOOLS
+Languages: Java, JavaScript, C++, Python,
+Technologies: Git, UNIX, VS Code, Microsoft Word, Microsoft PowerPoint, Microsoft Excel, SQL (Moderate), Scrum,
+unit testing, design patterns, UML
+PROJECTS
+Trombone Learning App
+● Collaborated with a team to design and develop Trombonafide, an interactive educational app that teaches trombone
+techniques through structured lessons and gamified activities.
+● Built modular MVC-based JavaFX architecture, managing dynamic scene transitions, user data persistence, and lesson
+completion tracking.
+● Integrated real-time user progress updates, custom CSS styling, and multimedia elements (backgrounds, audio) to
+enhance user experience.
+● Contributed to backend integration for tracking user points, lesson completions, and profile management, ensuring a
+smooth and rewarding platform.
+Portfolio Website
+● Developed a personal website showcasing professional background, skills, project portfolio, and contact information.
+● Utilized HTML to build a fully functional website and applied CSS to enhance its visual appeal for an engaging user
+experience.
+● A creative approach to web design complements strong proficiency in HTML and CSS.
+EXPERIENCE
+IT /Software Support Engineer intern | C.A. Short Company| Shelby, NC June 2024 - August 2024
+● Acquired hands-on experience across various IT departments during an internship at C.A. Short Company.
+● Utilized tools such as SQL, Visual Studio, Jira, and the C.A. Short website to support IT operations.
+● Collaborated with software developers to resolve tickets, focusing on code troubleshooting and optimization.
+● Actively participated in team meetings, gaining practical knowledge of agile methodologies and sprint cycles.
+● Observed and supported software engineers in debugging processes and program development during the company’s
+transition to a new interface.
+Control Room/ Field Camera Operator| Gamecock Live Production | Columbia, SC August 2024 - Spring 2025
+● Operate in the control room, handling replay and graphics for live sports broadcasts.
+● Collaborate within a high-paced team environment, making split-second decisions on camera angles and clip speeds.
+● Capture live footage on the field or in the stadium, with strong situational awareness for optimal filming moments.
+RELEVANT COURSES
+Current: Programming Language Structures, Artificial Intelligence, Vector Calculus, and Visualization Tools
+Previous: Algorithmic Design I & II, Computer Concepts, Calculus I & II, Intro Into Statistical Reasoning, Unix/Linux
+Fundamentals, Advanced Programming Techniques, Discrete Structures, Digital Logic Design, Computing In The
+Modern World, Online Public Communications, Applied Linear Algebra, Business Writing, Data Structures &
+Algorithms, Computer Architecture, and Software Engineering
