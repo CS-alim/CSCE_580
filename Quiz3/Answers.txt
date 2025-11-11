@@ -1,0 +1,115 @@
+Q1: Search and Heuristics [2 + 2 + 2 + 4 = 10 points]
+Instructions: Give your answers in bullet points.
+a) What is an admissible heuristics ? [2 points]
+*function in pathfinding algoritms 
+* never overestimates the path from the given node to target node
+* guranteed to find an optimal solution because
+* it will never overestimate the remaining costs
+b) Suppose you are given “h = 0” as the heuristics for a problem. Is it admissible ? [2 points]
+* Yes, h=0 is an admissable heuristics
+* since it always underestimate the value if h = 0 then it wont be an overestimate
+* the optimal costs is always non-negative that is why it works
+c) Suppose you are given “h = k” as the heuristics for a problem, where k is any number e.g.,
+k=1? Can you say it is admissible ? [2 points]
+* It is only true if k = 0 
+* if k > 1 then k has to be less than or equal to the actual minimal costs to reach the goal if not its not admissable
+d) You are given 3 heuristics: h1, h2 and h3 of which you are sure that one is admissible. Will
+h = min (h1, h2, h3) be admissible ? What can we say about h = max (h1, h2, h3) as admissible ?
+* if you know one of the heuristics is admissable then for h = min(h1, h2, h3) it will never fully exceed the admissable heuristics. 
+* in the min if you have one that is admissable then at most you can get is the admissable 
+* h = max(h1, h2, h3) if different
+* if you know one is admissible for max the other two h it could overestimate
+* we cant fully say max is admissable
+
+Q2
+
+Q2: Using search for a practical problem [10 + 30 + 30 = 70 points]
+Consider the missionaries and cannibals problem. Three missionaries and three cannibals are
+on one side of a river, along with a boat that can hold one or two people. Find a way to get
+everyone to the other side, without ever leaving a group of missionaries in one place
+outnumbered by the cannibals in that place.
+• States: In one representation, a state consists of an ordered sequence of three numbers
+representing the number of missionaries, cannibals, and boats on the bank of the river
+from which they started. Thus, the start state is (3,3,1).
+• Operators: from each state the possible operators are to take either one missionary,
+one cannibal, two missionaries, two cannibals, or one of each, across in the boat. Thus,
+there are at most five operators.
+• Goal test: reached state (0,0,0).
+• Path cost: number of crossings.
+a) Review the sample code provided at: https://github.com/biplav-s/course-ai-
+f25/tree/main/sample-code/future/search-missionary-cannibal
+
+Q2.1 What state representation does it implement – express goal in it ? What search strategy
+does it implement ? [5 + 5 = 10 points]
+it uses a 5-component representation 
+left_missionaries
+right_missionaries
+left_cannibals
+right_canabals
+boat_position
+(ML,CL,MR,CR,BaotSide)
+ML - missionaries on left
+CL - cannibals on left 
+MR - missionaries on right 
+CL - cannibal on left
+BoatSide - right or left
+initial state is 
+(3,3,0,0,"left")
+goal is 
+(0,0,3,3,"right")
+
+the strategy it uses is BFS (Breadth-First-Search)
+it uses a FIFO queue as the frontier and expands based on increased depth. 
+this gurantees a solution with the minimum number of crossings and makes sure it doesn' t get stuck in a loop
+Q2.2 Now change it to code a different search strategy of your choice. [30 points]
+
+Q2.3 Run it on all the 6 testcases shown in tester program: https://github.com/biplav-s/course-
+ai-f25/blob/main/sample-code/future/search-missionary-cannibal/MCTester.ipynb .
+[6 * 5 = 30 points]
+
+Show code, solution and time
+
+Q3
+what are the variables, their domains and constraints?
+Domains-
+T,W,O,U,R - {0,1,2,3,4,5,6,7,8,9}
+F - {1,2,3,4,5,6,7,8,9}
+carries - C1, C2, C3 - when you add two digits and possibly carry
+Constraints - 
+all letters represent different distinct digits
+AllDifferent(T,W,O,F,U,R)
+one column O+O = R + 10C1
+tens column W + W + C1 = U + 10C2
+hundreds columns - T + T + C2 = O + 10C3
+thousands column F = C3
+
+
+b 
+im going to use the standar AC-3 algorithm 
+AC-3(V, D, C)
+V: set of variables
+D: domains
+C: set of binary constraints
+
+Q = set of all arcs (Xi, Xj) such that there is a constraint between Xi and Xj
+
+while Q is not empty:
+    remove some (Xi, Xj) from Q
+    if REVISE([Xi, Xj]):
+        if D[Xi] is empty:
+            return "incosistent"
+        for each Xk in neighbors(Xi) with Xk != Xj:
+        add (Xk, Xi) to Q
+
+    return D 
+
+REVISE (Xi,Xk):
+    revised = false
+    for each value x in D[Xi]:
+        if there is no value y in D[Xj] such that (x, y) satisfies the contraints between Xi and Xj:
+            remove x from D[Xi]
+            revised = true
+        return revised
+
+I applied AC-3 to the variabls T,W,O,F,U,R,C1,C2,C3 with the binary constraints induced by the column
+equations and the AllDifferent relation. 
